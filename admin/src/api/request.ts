@@ -59,7 +59,7 @@ function unwrapResponse(response: AxiosResponse): unknown {
 }
 
 const service: AxiosInstance = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_BASE || '/api',
   timeout: 15000
 })
 
